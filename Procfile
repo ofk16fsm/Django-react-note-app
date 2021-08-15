@@ -1,1 +1,1 @@
-web: gunicorn django-react-note-app.wsgi --log-file -
+web: gunicorn backend.wsgi --log-file -
