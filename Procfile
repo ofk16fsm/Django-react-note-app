@@ -1,1 +1,2 @@
-web: gunicorn backend.backend.wsgi --log-file -
+release: python manage.py migrate
+web: gunicorn django-react-note-app.wsgi --log-file -
