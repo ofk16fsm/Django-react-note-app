@@ -27,7 +27,7 @@ SECRET_KEY = '2eeplihy$bi)hrszyf5g+bpvg44-d4=^@o!r$^3tb=u_oux2*w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['django-react-note-app.herokuapp.com', '127.0.0.1:8000', 'localhost']
 
 
 # Application definition
