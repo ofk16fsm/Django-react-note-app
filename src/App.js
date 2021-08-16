@@ -205,8 +205,9 @@ class App extends Component {
     }
 	
 	deleteFromApi = (note) => {
-		// eslint-disable-next-line
-		fetch('/api/notes/' + `${note.id}`, {
+		// eslint-disable-next-line		
+		// Because of proxy in package.json, command be shorten as follows:
+		fetch(`/api/notes/${note.id}/`, {
 			method: 'DELETE',
 			credentials: 'same-origin',
 			headers: {
