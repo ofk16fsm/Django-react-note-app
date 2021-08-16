@@ -78,7 +78,9 @@ class App extends Component {
     }
 	
 	readApi = () => {
-		fetch('http://127.0.0.1:8000/api/notes/')
+		// fetch('http://127.0.0.1:8000/api/notes/')
+		// Because of proxy in package.json, command be shorten as follows:
+		fetch('/api/notes/')
 		.then(response => response.json())
 		.then(data => {
 			console.log('Successful');
@@ -120,7 +122,7 @@ class App extends Component {
     }
 	
 	handleApi = (item) => {
-		fetch('http://127.0.0.1:8000/api/notes/', {
+		fetch('/api/notes/', {
 		  method: 'POST', // or 'PUT'
 		  credentials: 'same-origin',
 		  headers: {
@@ -204,7 +206,7 @@ class App extends Component {
 	
 	deleteFromApi = (note) => {
 		// eslint-disable-next-line
-		fetch('http://127.0.0.1:8000/api/notes/' + `${note.id}`, {
+		fetch('/api/notes/' + `${note.id}`, {
 			method: 'DELETE',
 			credentials: 'same-origin',
 			headers: {
@@ -235,7 +237,7 @@ class App extends Component {
 	
 	editFromApi = (id) => {
 		// eslint-disable-next-line
-		fetch('http://127.0.0.1:8000/api/notes/' + `${id}`, {
+		fetch('/api/notes/' + `${id}`, {
 			method: 'HEAD',
 			credentials: 'same-origin',
 			headers: {
